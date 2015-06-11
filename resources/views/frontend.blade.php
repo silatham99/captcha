@@ -5,13 +5,13 @@
         var ajax = function(route, method, onSuccess, onFail) {
                 var xhr = (window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP"));
 
-                if (method == 'POST') {
+                if (method === 'POST') {
                     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
                 }
 
                 xhr.onreadystatechange = function() {
-                    if (xhr.readyState == XMLHttpRequest.DONE) {
-                        ((xhr.status == 200) ? onSuccess : onFail)(xhr.responseText); 
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        ((xhr.status === 200) ? onSuccess : onFail)(xhr.responseText); 
                     }
                 }
 

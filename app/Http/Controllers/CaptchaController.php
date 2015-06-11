@@ -7,9 +7,7 @@ class CaptchaController extends Controller {
     /**
      * Return a new captcha code.
      *
-     * @param  int  $photoId
-     * @param  int  $commentId
-     * @return Response
+     * @return JSON object containing an image in base64 and an expiration time
      */
     public function create()
     {
